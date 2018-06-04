@@ -7,7 +7,7 @@
 * Requires at least: Wordpress 3.0
 * Tested up to: Wordpress 4.9.6
 
-## Description
+# Description
 
 ## What is qPoly
 qPoly add-on allows users to use Polylang similar to how they use qTranslate, by separating different language contexts with shortcodes.
