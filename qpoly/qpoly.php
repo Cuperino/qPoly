@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: qPoly
-Plugin URI: https://javiercordero.info/software/qpoly
+Plugin URI: https://github.com/javiercordero/qPoly/
 Version: 1.2
 Description: Polylang extension allows using Polylang similar to how you use qTranslate.
 Author: Javier O. Cordero Pérez
