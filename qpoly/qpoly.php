@@ -1,14 +1,16 @@
 <?php
 /*
 Plugin Name: qPoly
-Version: 1.1
+Plugin URI: https://javiercordero.info/software/qpoly
+Version: 1.2
 Description: Polylang extension allows using Polylang similar to how you use qTranslate.
 Author: Javier O. Cordero Pérez
-Author URI: mailto:javier.cordero@upr.edu
+Author URI: https://javiercordero.info
+License: GPLv2 or later
 */
 
 /*
- * Copyright 2015 Javier Oscar Cordero Pérez
+ * Copyright 2015-2019 Javier Oscar Cordero Pérez
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -39,7 +41,7 @@ function qpolylang_func( $atts, $content = null )
     if( function_exists( 'pll_current_language' ) )
         $pageLang = pll_current_language();
     else
-        echo('Error: qPolylang needs Polylang to be active in order to work.');
+        echo('Error: qPoly needs Polylang to be active in order to work.');
 
     // If pageLang matches the lang argument, show content.
     if( $pageLang == $a['lang'] )
@@ -49,4 +51,22 @@ function qpolylang_func( $atts, $content = null )
     return '';
 }
 add_shortcode( 'qpoly', 'qpolylang_func' );
+
+function display_dependency_alert() {
+    ?>
+    <div class="notice notice-error is-dismissible">
+        <p><?php _e( 'You must activate the Polylang plugin for qPoly to work!', 'activate-polylang' ); ?></p>
+    </div>
+    <?php
+}
+
+function test_for_dependency() 
+{
+	if( ! is_plugin_active('polylang/polylang.php') )
+		add_action( 'admin_notices', 'display_dependency_alert' );
+	else
+		
+}
+add_action( 'admin_init', 'test_for_dependency' );
+
 ?>

@@ -5,24 +5,28 @@
 * Author: Javier Oscar Cordero Pérez
 * Tags: translation, polylang, add-on, in-page, shortcode
 * Requires at least: Wordpress 3.0
-* Tested up to: Wordpress 4.9.6
+* Tested up to: Wordpress 5.0.2
 
 # Description
 
 ## What is qPoly
-qPoly add-on allows users to use Polylang similar to how they use qTranslate, by separating different language contexts with shortcodes.
+qPoly add-on allows users to use Polylang similar to how the qTranslate plugin works. It is most useful when a theme does not support string translations, and yet you intend on using it. qPoly works by separating different language contents on the same page, using shortcodes.
 
 ## How to use?
-1. Find parts of a site that can interpret shortcodes, but aren't translatable with the default tools Polylang brings.
-E.g. Some theme inputs which strings aren't yet translatable, places where string translations would be too long and messy, and custom page templates used in the Pods plug-in.
-2. Use the following shortcode. With the 'lang' attribute you specify the language.
-[qpoly lang="es"]string contents[/qlopy]
+Insert text inside the qPoly shortcode. Use the 'lang' attribute to specify the language using ISO 639-1 codes.
+`[qpoly lang="es"]Text content[/qlopy]`
 
-## Tested languages
-* 'en' : English
-* 'es' : Spanish
+## Compatible languages
+qPoly works with all Polylang supported languages. It accepts 2 character language codes from the ISO 639-1 standard. These can be found at:
+* http://xml.coverpages.org/iso639a.html
+* https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
 ## Changelog
+
+### 1.2 (2019)
+* Displays an error alert when Polylang isn't active
+* Updated Wordpress tested version
+* Updated Readme
 
 ### 1.1 (2018)
 * Published to GitHub
