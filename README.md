@@ -14,6 +14,7 @@ qPoly add-on allows users to use Polylang similar to how the qTranslate plugin w
 
 ## How to use?
 Insert text inside the qPoly shortcode. Use the 'lang' attribute to specify the language using ISO 639-1 codes.
+
 `[qpoly lang="es"]Text content[/qlopy]`
 
 ## Compatible languages
