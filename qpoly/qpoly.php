@@ -64,8 +64,6 @@ function test_for_dependency()
 {
 	if( ! is_plugin_active('polylang/polylang.php') )
 		add_action( 'admin_notices', 'display_dependency_alert' );
-	else
-		
 }
 add_action( 'admin_init', 'test_for_dependency' );
 
