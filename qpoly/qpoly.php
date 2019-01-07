@@ -1,14 +1,13 @@
 <?php
 /*
 Plugin Name: qPoly
-Plugin URI: https://github.com/javiercordero/qPoly/
+Plugin URI: https://javiercordero.info/software/qpoly
 Version: 1.2
 Description: Polylang extension allows using Polylang similar to how you use qTranslate.
 Author: Javier O. Cordero Pérez
 Author URI: https://javiercordero.info
 License: GPLv2 or later
 */
-
 /*
  * Copyright 2015-2019 Javier Oscar Cordero Pérez
  *
@@ -29,7 +28,7 @@ License: GPLv2 or later
  *
  */
 
-function qpolylang_func( $atts, $content = null )
+function qpoly_language_shortcode( $atts, $content = null )
 {
     // Get shortcode attribute.
     $a = shortcode_atts( array(
@@ -50,9 +49,10 @@ function qpolylang_func( $atts, $content = null )
     // Otherwise show nothing.
     return '';
 }
-add_shortcode( 'qpoly', 'qpolylang_func' );
+add_shortcode( 'qpoly', 'qpoly_language_shortcode' );
 
-function display_dependency_alert() {
+function qpoly_display_dependency_alert()
+{
     ?>
     <div class="notice notice-error is-dismissible">
         <p><?php _e( 'You must activate the Polylang plugin for qPoly to work!', 'activate-polylang' ); ?></p>
@@ -60,11 +60,11 @@ function display_dependency_alert() {
     <?php
 }
 
-function test_for_dependency() 
+function qpoly_test_for_polylang_dependency() 
 {
-	if( ! is_plugin_active('polylang/polylang.php') )
-		add_action( 'admin_notices', 'display_dependency_alert' );
+    if( ! is_plugin_active('polylang/polylang.php') )
+        add_action( 'admin_notices', 'qpoly_display_dependency_alert' );
 }
-add_action( 'admin_init', 'test_for_dependency' );
+add_action( 'admin_init', 'qpoly_test_for_polylang_dependency' );
 
 ?>
