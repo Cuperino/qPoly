@@ -23,6 +23,10 @@ qPoly works with all Polylang supported languages. It accepts 2 character langua
 
 ## Changelog
 
+
+### 1.2.1 (2019)
+* Added 'qpoly_' prefix and improved function naming
+
 ### 1.2 (2019)
 * Displays an error alert when Polylang isn't active
 * Updated Wordpress tested version
