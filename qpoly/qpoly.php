@@ -40,7 +40,7 @@ function qpoly_language_shortcode( $atts, $content = null )
     if( function_exists( 'pll_current_language' ) )
         $pageLang = pll_current_language();
     else
-        echo('Error: qPoly needs Polylang to be active in order to work.');
+        echo _e( 'Error: qPoly needs Polylang to be active in order to work.', 'qpoly-activate-polylang-shortcode' );
 
     // If pageLang matches the lang argument, show content.
     if( $pageLang == $a['lang'] )
@@ -55,7 +55,7 @@ function qpoly_display_dependency_alert()
 {
     ?>
     <div class="notice notice-error is-dismissible">
-        <p><?php _e( 'You must activate the Polylang plugin for qPoly to work!', 'activate-polylang' ); ?></p>
+        <p><?php _e( 'You must activate the Polylang plugin for qPoly to work!', 'qpoly-activate-polylang-notice' ); ?></p>
     </div>
     <?php
 }
