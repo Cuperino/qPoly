@@ -1,12 +1,6 @@
 [![GitHub license](https://img.shields.io/badge/license-GPL2-blue.svg)](https://raw.githubusercontent.com/javiercordero/qPoly/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/javiercordero/qPoly.svg)](https://github.com/javiercordero/qPoly/releases)
 
-# qPoly 
-* Author: Javier Oscar Cordero Pérez
-* Tags: translation, polylang, add-on, in-page, shortcode
-* Requires at least: Wordpress 3.0
-* Tested up to: Wordpress 5.0.2
-
 # Description
 
 ## What is qPoly
@@ -21,6 +15,11 @@ Insert text inside the qPoly shortcode. Use the 'lang' attribute to specify the 
 qPoly works with all Polylang supported languages. It accepts 2 character language codes from the ISO 639-1 standard. These can be found at:
 * http://xml.coverpages.org/iso639a.html
 * https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
+## Other details
+* Tags: translation, polylang, add-on, in-page, shortcode
+* Tested up to: Wordpress 5.0.2
+* Requires at least: Wordpress 3.0
 
 ## Changelog
 
